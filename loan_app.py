@@ -14,6 +14,8 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
+    
+        
     features = [float(x) for x in request.form.values()]
     final_features = [np.array(features)]
     prediction = model.predict(final_features)
