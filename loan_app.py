@@ -18,9 +18,7 @@ def predict():
     final_features = [np.array(features)]
     prediction = model.predict(final_features)
     
-    output = prediction[0]
-    
-    return render_template("loan.html", prediction_text="STATUS:".format(output))
+    return render_template("loan.html", prediction_text="STATUS: {}".format(prediction))
 
 if __name__ == "__main__":
     app.run(debug=True)
