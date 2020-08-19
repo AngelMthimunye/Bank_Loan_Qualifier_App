@@ -705,7 +705,17 @@ div.blog a.more:hover {
 	line-height: 27px;
 	width: 440px;
 	border: 3px solid #af8112;
+	margin: 0 0 12px; 
+
+#contact form select {
+	color: #626161;
+	font-size: 13px;
+	height: 27px;
+	line-height: 27px;
+	width: 440px;
+	border: 3px solid #af8112;
 	margin: 0 0 12px;
+
 }
 #contact form input.btn1 {
 	color: #966a01;
