@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Loan Predictor</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div id="logo">
+        		    <a id="logo"><img src="static/images/Logo_Bank.jpg" alt="log"></a>
+			</div>
+			
+		</div>
+	</div>
+	<div id="contents">
+		<div>
+			<div class="body" id="contact">
+				<div id="sidebar">
+					<div class="body">
+						<img src="static/images/corner_pic_2.jpg" alt="Img">
+						<div class="contact">
+							
+						</div>
+					</div>
+				</div>
+				<div id="main">
+					<h1>Loan Status Predictor</h1>
+					<p>
+    					  	Please Enter Your Details Below to Determine if You Qualify for a Bank Loan.
+					</p>
+					<h4>{{ prediction_text }} </h4>
+					<form action="{{ url_for('predict')}}" method="post">
+						<label>Gender</label>
+						<!-- <input type="text" value=""> -->
+						<select name="Gender" required="required">
+                            <option value="" selected="selected"> Please Select Your Gender
+                        	<option value="0">Female
+                        	<option value="1">Male
+                        </select>
+                        </br>
+                        </br>
+						<label>Married</label>
+						<!-- <input type="text" value=""> -->
+						<select name="Married" required="required">
+                            <option value="" selected="selected"> Please Select Your Marriage Status
+                        	<option value="1">Married
+                        	<option value="0">Not Married
+                        </select>
+                        </br>
+                        </br>
+						<label>Number of Dependents</label>
+						<input type="text" name="Dependents" required="required">
+						<label>Education Level</label>
+						<!-- <input type="text" value=""> -->
+						<select name="Education" required="required">
+                            <option value="" selected="selected"> Please Select Your Education Level
+                        	<option value="0">Graduate
+                        	<option value="1">Not a Graduate
+                        </select>
+                        </br>
+                        </br>
+						<label>Employment</label>
+						<!-- <input type="text" value=""> -->
+						<select name="Self_Employment" required="required">
+                            <option value="" selected="selected"> Please Select Your Employment Status
+                        	<option value="1">Self-Employed
+                        	<option value="0">Not Self-Employed
+                        </select>
+                        </br>
+                        </br>
+						<label>Applicant Income Amount ($)</label>
+						<input type="text" name="ApplicantIncome" required="required">
+						<label>Co-Applicant Income Amount ($)</label>
+						<input type="text" name="CoapplicantIncome" required="required">
+						<label>Loan Amount ($)</label>
+						<input type="text" name="LoanAmount" required="required">
+						<label>Loan Amount Period (Months)</label>
+						<input type="text" name="Loan_Amount_Term" required="required">
+						<label>Credit History</label>
+						<!-- <input type="text" value=""> -->
+						<select name="Credit_History" required="required">
+                            <option value="" selected="selected"> Please Select Your Credit History Status
+                        	<option value="0">I don't have credit history
+                        	<option value="1">I have credit history
+                        </select>
+                        </br>
+                        </br>
+						<label>Property Area</label>
+						<!-- <input type="text" value=""> -->
+						<select name="Property_Area" required="required">
+                            <option value="" selected="selected"> Please Select Your Area
+                        	<option value="0">Rural
+                        	<option value="1">Semi-Urban
+                        	<option value="2">Urban
+                        </select>
+                        </br>
+                        </br>
+						<input type="submit" value="SUBMIT" class="btn1">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
